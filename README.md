@@ -1,2 +1,4 @@
 # 4th semester Python
-Camilla Jenny Valerius Staunstrup - cph-cs340cphbusiness.dk - group: Black Tear
+* Camilla Jenny Valerius Staunstrup
+  * Student ID: cph-cs340
+  * Group: Black Tear
