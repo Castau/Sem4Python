@@ -5,40 +5,22 @@ from urllib.parse import urlparse
 
 def download(url, to=None):
     parsed_url = urlparse(url)
+    filename = os.path.basename(parsed_url.path)
+    fullfilename = "Downloaded_Files/" + filename
+    fileexists = os.path.isfile(fullfilename)
 
     if parsed_url.scheme and parsed_url.netloc and parsed_url.path:
+        if fileexists:
+            print("File already exits here: " +
+                  fullfilename + ", download aborted")
+            return fullfilename
+
         if (to == None):
-            filename = os.path.basename(parsed_url.path)
-            fullfilename = "Downloaded_Files/" + filename
             req.urlretrieve(url, fullfilename)
-        elif (to):
+            print("Downloading file to: " + fullfilename)
+
+        elif to and os.path.isfile(to):
             req.urlretrieve(url, to)
-        print("Downloading file: " + url)
+            print("Downloading file to: " + to + filename)
     else:
-        print("Error in format: " + url)
-
-
-# import os
-# import requests as req
-# from urllib.parse import urlparse
-
-
-# def download(url, to=None):
-#     parsed_python_url = urlparse(url)
-
-#     local_data = os.path.isfile(
-#         "./" + os.path.basename(parsed_python_url.path))
-#     if local_data:
-#         print("File already exists1")
-#         return os.path.basename(parsed_python_url.path)
-#     if to and os.path.isfile(to):
-#         print("File already exists2")
-#         return to
-#     else:
-#         data = req.get(url)
-#         location = "./" + os.path.basename(parsed_python_url.path)
-#         if to:
-#             location = to
-#         open(location, "wb").write(data.content)
-#         print("saving file")
-#         return location
+        print("Error in URL format: " + url)
