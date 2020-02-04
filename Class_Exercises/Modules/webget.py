@@ -7,17 +7,15 @@ def download(url, to=None):
     parsed_url = urlparse(url)
 
     if parsed_url.scheme and parsed_url.netloc and parsed_url.path:
-        # IS URL
         if (to == None):
             filename = os.path.basename(parsed_url.path)
-            # Should perhaps contain a check for whether or not the file exists locally already.
-            req.urlretrieve(url, filename)
+            fullfilename = "Downloaded_Files/" + filename
+            req.urlretrieve(url, fullfilename)
         elif (to):
             req.urlretrieve(url, to)
-        print("Attempting to retrieve doc from: " + url)
+        print("Downloading file: " + url)
     else:
-      # IS NOT URL
-        print("Wrong url format: " + url)
+        print("Error in format: " + url)
 
 
 # import os
