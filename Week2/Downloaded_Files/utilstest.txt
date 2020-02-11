@@ -1,0 +1,10 @@
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\emails.txt
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\headlines.txt
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\outputfile.txt
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\outputfile3.txt
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\outputfile4.txt
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\outputfile5.txt
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\Sample-Spreadsheet-100-rows.csv
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\strings.txt
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\testfilenames.txt
+F:\Developer\4semester\Python\Afleveringer\Sem4Python\Week2\Downloaded_Files\utilstest.txt
