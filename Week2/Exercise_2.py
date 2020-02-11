@@ -28,7 +28,8 @@ parser.add_argument('-output', help='output file')
 parser.add_argument('-filenames', help='function: filenames')
 parser.add_argument('-recursiv', help='function: filenames_recursiv')
 parser.add_argument('-firstline', help='function: firstline')
-parser.add_argument('-email', help='function: firstline')
+parser.add_argument('-email', help='function: email_lines')
+parser.add_argument('-head', help='function: head_lines')
 
 
 def filenames(folderpath, outputfile):
