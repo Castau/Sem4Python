@@ -1,3 +1,9 @@
+import random
+import csv
+import os
+import matplotlib.pyplot as plt
+import numpy as np
+
 # 1) Create 3 classes: Student, DataSheet and Course
 # 2) A student has a data_sheet and a data_sheet has multiple courses in particular order
 # 3) Each course has name, classroom, teacher, ETCS and optional grade if course is taken.
@@ -19,11 +25,6 @@
 # in each category on y-axis. (e.g. make 10 categories from 0-100 %)
 # Extra: Make the Datasheet class iterable so that next(data_sheet) will return the next
 # course in the list
-import random
-import csv
-import os
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 class Student():
