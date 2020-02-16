@@ -54,7 +54,6 @@ def write_students_to_file(outputpath, students: []):
             csvwriter.writerow([str(e)])
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     # closests_to_completetion(ex1.read_students_to_list(csv_students), True)
-    write_students_to_file(week3_path, closests_to_completetion(
-        ex1.read_students_to_list(csv_students), True))
+    # write_students_to_file(week3_path, closests_to_completetion(ex1.read_students_to_list(csv_students), True))

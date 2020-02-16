@@ -49,6 +49,9 @@ class Student():
     def __repr__(self):
         return 'Student(%r, %r, %r, %r)' % (self.name, self.gender, self.datasheet, self.imageurl)
 
+    def get_courses(self):
+        return self.datasheet.get_courses()
+
 
 class DataSheet():
     def __init__(self, courses=[]):
@@ -72,6 +75,9 @@ class DataSheet():
             if int(course.grade) >= 2:
                 ects += int(course.ECTS)
         return ects
+
+    def get_courses(self):
+        return self.courses
 
 
 class Course():
@@ -230,7 +236,7 @@ def avg_grade_student_barchart(students):
     plt.show()
 
 
-def student_completion_barchart(students):
+def ects_completion_categories(students):
     studcomp = {}
     studcomp['0-10'] = 0
     studcomp['10-20'] = 0
@@ -265,7 +271,10 @@ def student_completion_barchart(students):
             studcomp['80-90'] = studcomp['80-90'] + 1
         elif student.completed_courses() >= 90 and student.completed_courses() <= 100:
             studcomp['90-100'] = studcomp['90-100'] + 1
-    print(studcomp)
+    return studcomp
+
+
+def student_completion_barchart(studcomp):
     plt.figure()
     plt.bar(studcomp.keys(), studcomp.values(),
             width=0.9, align='center', zorder=3)
@@ -286,4 +295,4 @@ csv_students = 'F:\\Developer\\4semester\\Python\\Afleveringer\\Sem4Python\\Week
 #sort_students_by_grade(read_students_to_list(csv_students), True)
 # avg_grade_student_barchart(sort_students_by_grade(read_students_to_list(csv_students), True))
 # avg_grade_student_barchart(read_students_to_list(csv_students))
-# student_completion_barchart(read_students_to_list(csv_students))
+# student_completion_barchart(ects_completion_categories(read_students_to_list(csv_students)))
