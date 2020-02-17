@@ -77,8 +77,6 @@ def citizens_over_65_2015(citizendata):
     print(filtereddata)
     return sum_of_people
 
-# 7) Make a line plot showing the changes of number of people in vesterbro and østerbro from 1992 to 2015
-
 
 def citizens_vesterbro_østerbro(citizendata):
     v_ø_districts = [2, 4]
