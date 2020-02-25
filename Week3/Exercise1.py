@@ -289,10 +289,11 @@ def student_completion_barchart(studcomp):
 week3_path = 'F:\\Developer\\4semester\\Python\\Afleveringer\\Sem4Python\\Week3\\'
 csv_students = 'F:\\Developer\\4semester\\Python\\Afleveringer\\Sem4Python\\Week3\\students.csv'
 
-# if __name__ == "__main__":
-# write_students_to_file(week3_path, createStudents(50))
-# read_students_to_list(csv_students)
-#sort_students_by_grade(read_students_to_list(csv_students), True)
-# avg_grade_student_barchart(sort_students_by_grade(read_students_to_list(csv_students), True))
+if __name__ == "__main__":
+    # write_students_to_file(week3_path, createStudents(50))
+    # read_students_to_list(csv_students)
+    #sort_students_by_grade(read_students_to_list(csv_students), True)
+    avg_grade_student_barchart(sort_students_by_grade(
+        read_students_to_list(csv_students), True))
 # avg_grade_student_barchart(read_students_to_list(csv_students))
 # student_completion_barchart(ects_completion_categories(read_students_to_list(csv_students)))
