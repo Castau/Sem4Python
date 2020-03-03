@@ -10,4 +10,4 @@ ipython_config.py
 __pycache__/
 
 ### Visual Studio Code ###
-.vscode/*
+.vscode/
