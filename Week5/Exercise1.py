@@ -120,14 +120,8 @@ def bar_plot_copenhagen_marrital_status_2008_2020(data_gift, data_ugift, data_fr
 def unmarried_married_all_ages(file):
     rawdata = pd.read_csv(file, delimiter=';')
     data = rawdata[rawdata['ALDER'] != 'I alt']
-    print(data)
     gift = data[data['CIVILSTAND'] == 'Gift/separeret']
     ugift = data[data['CIVILSTAND'] == 'Ugift']
-    print('gift')
-    print(gift)
-    print()
-    print('ugift')
-    print(ugift)
     return gift, ugift
 
 
