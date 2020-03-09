@@ -20,34 +20,33 @@ from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import Queue
 
 class NotFoundException(Exception):
-    pass
+    def __init__(self, *args, **kwargs):
+        ValueError.__init__(self, *args, **kwargs)
 
 last = None
 
 class moduleClass():
     def __init__(self, url_list):
         self.urlList = url_list
-        self.listLength = len(url_list)
         self.count = 0
         
 
-
     def __iter__(self):
+        self.count = 0
         return self
 
 
     def __next__(self): 
         self.count += 1
-        if self.count < self.listLength:
+        if self.count < len(self.url_list):
             return os.path.basename(urlparse(self.urlList[self.count]).path)
-        raise StopIteration
+        else:
+            raise StopIteration
 
 
     def urllist_generator(self):
-        count = 0
-        while count < self.urlList:
-            yield self.urlList[count]
-            count += 1
+        for url in self.urlList:
+            yield url
 
 
     def download(self, url, name=None):
