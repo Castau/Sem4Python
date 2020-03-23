@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def showStatskode():
-    connectionString = 'mysql+pymysql://root:paragraf119@localhost:3306/python8_fr'
+    connectionString = 'mysql+pymysql://user:password@localhost:3306/db'
     engine = create_engine(connectionString)
     df = pd.read_sql_table('statskode', con=engine)
     return df.to_html()
