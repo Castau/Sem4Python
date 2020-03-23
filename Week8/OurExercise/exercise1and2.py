@@ -3,7 +3,7 @@ import pymysql
 from sqlalchemy import create_engine
 import re
 
-connectionString = 'mysql+pymysql://root:paragraf119@localhost:3306/python8'
+connectionString = 'mysql+pymysql://user:password@localhost:3306/db'
 
 
 # Exercise1:
